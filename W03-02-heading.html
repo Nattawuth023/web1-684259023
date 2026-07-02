@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #70f356;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #70f356, #f3f356);
+        }
+        .header a {
+            color: #7922ca;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .hero {
+            font-size: 2.5em;
+            color: #345b83;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        .text-title {
+            text-align: title;
+        }
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 8px 6px rgba(0, 0, 0, 0.5);
+        }
+        .label {
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-color: #fff;
+        }
+
+        .h1-label {
+            background-color: #3498db;
+        }
+        .h2-label {
+            background-color: #2ecc71;
+        }
+        .h3-label {
+            background-color: #e74c3c;
+        }
+        .h4-label {
+            background-color: #9b59b6;
+        }
+        .h5-label {     
+            background-color: #f1c40f;
+        }
+        .h6-label {
+            background-color: #34495e;
+
+        pre {
+            background-color: #f4f4f4;
+            border-left: 5px solid #3498db;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .note {
+            color: #252213;
+        background-color: #ced6ab;
+        }
+        .note::before {
+            content: "📌";
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <section class="header">
+        <h1 class="text-center">เรียนรู้เว็บเบื่องต้น</h1>
+        <p><a href="index.html">HOME</a></p>
+    </section>
+    <div class="container">
+        <h1 class="hero">Workshop: HTML Heading</h1>
+        <p>ฝึกใช้แท็ก &lt;h1&gt; – &lt;h6&gt; และการปรับขนาดหัวข้อด้วย CSS</p>
+        <div class="card">
+        <h2>1. ความหมายของ Headings (H1–H6)</h2>
+            <ul>
+              <li><span class="label h1-label">H1</span> – หัวข้อใหญ่สุด ใช้สำหรับชื่อหน้าเว็บหรือหัวข้อหลัก</li>
+              <li><span class="label h2-label">H2</span> – หัวข้อรอง แบ่ง Section ของเนื้อหา</li>
+              <li><span class="label h3-label">H3</span> – หัวข้อย่อยภายใน H2</li>
+              <li><span class="label h4-label">H4</span> – ย่อยลงไปอีกระดับ</li>
+              <li><span class="label h5-label">H5</span> – ใช้น้อย แต่เน้นลำดับข้อมูล</li>
+              <li><span class="label h6-label">H6</span> – เล็กสุด ใช้กับหัวข้อระดับลึก</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2>2. ตัวอยางการใช้ H1–H6</h2>
+            <pre>
+                <code>
+            &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+            &lt;h2&gt;HTML Basics&lt;/h2&gt;
+            &lt;h3&gt;What is HTML?&lt;/h3&gt;
+            &lt;h4&gt;HTML Syntax&lt;/h4&gt;
+            &lt;h5&gt;Example Code&lt;/h5&gt;
+            &lt;h6&gt;Note: Case Sensitive&lt;/h6&gt;
+                </code>
+        </pre>
+        <h1>H1: Welcome to My Website</h1>
+        <h2>H2: HTML Basics</h2>
+        <h3>H3: What is HTML?</h3>
+        <h4>H4: HTML Syntax</h4>
+        <h5>H5: Example Code</h5>
+        <h6 class="note">H6: Note about heading size</h6>
+        </div>
+    </div>
+    <a href="index.html"><p style="text-align: right;">Back to Home</p></a>
+    
+</body>
+</html>
