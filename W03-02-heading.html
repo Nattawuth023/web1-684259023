@@ -27,10 +27,16 @@
             margin: 0 auto;
         }
         .hero {
-            font-size: 2.5em;
-            color: #345b83;
+            padding: 50px 20px;
         }
-        
+        .hero-text-h1 {
+            font-size: 36px;
+            color: #333;
+        }
+        .hero-text-p {
+            font-size: 18px;
+            color: #666;
+        }
         .text-center {
             text-align: center;
         }
@@ -39,55 +45,73 @@
         }
         .card {
             background-color: #fff;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 8px 6px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+            overflow: hidden;
+            
         }
-        .label {
-            padding: 2px 6px;
-            border-radius: 4px;
+        .card margin-bottom {margin-bottom: 15px;}
+
+        .card-header {
+            background-color: #d3dbff;
+            color: #3516e4;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
         }
 
-        .h1-label {
-            background-color: #3498db;
+        .card-body {
+            font-size: 16px;
+            padding: 15px;
+        }
+
+        .label {
+            padding: 6px 10px;
+            border-radius: 10px 10px;
             color: #fff;
         }
-        .h2-label {
-            background-color: #2ecc71;
-            color: #fff;   
-        }
-        .h3-label {
-            background-color: #e74c3c;
-                color: #fff;
-        }
-        .h4-label {
-            background-color: #9b59b6;
-            color: #fff;
-        }
-        .h5-label {     
-            background-color: #f1c40f;
-            color: #fff;
-        }
-        .h6-label {
-            background-color: #34495e;
-            color: #fff;
-        }
+
+        .h1-label {background-color: #3498db;}
+        .h2-label {background-color: #2ecc71;}
+        .h3-label {background-color: #e74c3c}
+        .h4-label {background-color: #9b59b6;}
+        .h5-label {background-color: #f1c40f;}
+        .h6-label {background-color: #34495e;}
+        
         pre {
             background-color: #110a0a;
-            border-left: 5px solid #2a05b1;
-            margin: 20px 0;
-            padding: 10px;
-            font-size: 16px;
             color: #fff;
+            border-radius: 10px;
+            font-size: 16px;
         }
+
+        .text-shade {
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .text-shade h1{color: #33d84e;}
+        .text-shade h2{color: #2ecc71;}
+        .text-shade h3{color: #3ce767;} 
+        .text-shade h4{color: #59b675;}
+        .text-shade h5{color: #a0eea0;}
+        .text-shade h6{color: #c0ebd3;}
+
         .note {
-            color: #252213;
-        background-color: #ced6ab;
+            color: #beb065;
+        background-color: #46000f;
         }
         .note::before {
             content: "📌";
             margin-right: 5px;
+        }
+
+        .tip-box {
+            background-color: #6ac8ff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -97,39 +121,64 @@
         <p><a href="index.html">HOME</a></p>
     </section>
     <div class="container">
-        <h1 class="hero">Workshop: HTML Heading</h1>
-        <p>ฝึกใช้แท็ก &lt;h1&gt; – &lt;h6&gt; และการปรับขนาดหัวข้อด้วย CSS</p>
+        <h1 class="hero-text-h1">Workshop: HTML Heading</h1>
+        <p class="hero-text-p">ฝึกใช้แท็ก &lt;h1&gt; – &lt;h6&gt; และการปรับขนาดหัวข้อด้วย CSS</p>
+
+        <!-- Card 1: ความหมายของ Headings (H1–H6) -->
         <div class="card">
-        <h2>1. ความหมายของ Headings (H1–H6)</h2>
-            <ul>
-              <li><span class="label h1-label">H1</span> – หัวข้อใหญ่สุด ใช้สำหรับชื่อหน้าเว็บหรือหัวข้อหลัก</li>
-              <li><span class="label h2-label">H2</span> – หัวข้อรอง แบ่ง Section ของเนื้อหา</li>
-              <li><span class="label h3-label">H3</span> – หัวข้อย่อยภายใน H2</li>
-              <li><span class="label h4-label">H4</span> – ย่อยลงไปอีกระดับ</li>
-              <li><span class="label h5-label">H5</span> – ใช้น้อย แต่เน้นลำดับข้อมูล</li>
-              <li><span class="label h6-label">H6</span> – เล็กสุด ใช้กับหัวข้อระดับลึก</li>
-            </ul>
+        <div class="card-header">
+            <h2>1. ความหมายของ Headings (H1–H6)</h2>
         </div>
+              <div class="card-body">
+<p class="card margin-bottom">Headings มีทั้งหมด 6 ระดับ ตั้งแต่ H1 ถึง H6 ซึ่ง H1 เป็นหัวข้อใหญ่สุด และ H6 เป็นหัวข้อเล็กสุด</p>
+<p class="card margin-bottom"><span class="label h1-label">H1</span> – หัวข้อใหญ่สุด ใช้สำหรับชื่อหน้าเว็บหรือหัวข้อหลัก</p>
+<p class="card margin-bottom"><span class="label h2-label">H2</span> – หัวข้อรอง แบ่ง Section ของเนื้อหา</p>
+<p class="card margin-bottom"><span class="label h3-label">H3</span> – หัวข้อย่อยภายใน H2</p>
+<p class="card margin-bottom"><span class="label h4-label">H4</span> – ย่อยลงไปอีกระดับ</p>
+<p class="card margin-bottom"><span class="label h5-label">H5</span> – ใช้น้อย แต่เน้นลำดับข้อมูล</p>
+<p class="card margin-bottom"><span class="label h6-label">H6</span> – เล็กสุด ใช้กับหัวข้อระดับลึก</p>
+              </div>
+        </div>
+        <!-- Card 2: ตัวอย่างการใช้ H1–H6 -->
         <div class="card">
-            <h2>2. ตัวอยางการใช้ H1–H6</h2>
-            <pre>
-                <code>
-            &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
-            &lt;h2&gt;HTML Basics&lt;/h2&gt;
-            &lt;h3&gt;What is HTML?&lt;/h3&gt;
-            &lt;h4&gt;HTML Syntax&lt;/h4&gt;
-            &lt;h5&gt;Example Code&lt;/h5&gt;
-            &lt;h6&gt;Note: Case Sensitive&lt;/h6&gt;
-                </code>
-        </pre>
-        <h1>H1: Welcome to My Website</h1>
-        <h2>H2: HTML Basics</h2>
-        <h3>H3: What is HTML?</h3>
-        <h4>H4: HTML Syntax</h4>
-        <h5>H5: Example Code</h5>
-        <h6 class="note">H6: Note about heading size</h6>
+            <div class="card-header">
+                <h2>2. ตัวอยางการใช้ H1–H6</h2>
+            </div>
+            <div>
+                <div class="card-body">
+                    <pre>
+                            <code>
+        &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+        &lt;h2&gt;HTML Basics&lt;/h2&gt;
+        &lt;h3&gt;What is HTML?&lt;/h3&gt;
+        &lt;h4&gt;HTML Syntax&lt;/h4&gt;
+        &lt;h5&gt;Example Code&lt;/h5&gt;
+        &lt;h6&gt;Note: Case Sensitive&lt;/h6&gt;
+                            </code>
+                    </pre>
+                        <div class="text-shade">
+                            <p>ผลลัพธ์ที่ได้จากโค้ดด้านบน</p>
+<h1>H1: Welcome to My Website</h1>
+<h2>H2: HTML Basics</h2>
+<h3>H3: What is HTML?</h3>
+<h4>H4: HTML Syntax</h4>
+<h5>H5: Example Code</h5>
+<h6>H6: Note about heading size</h6>
+                </div>
+        </div>
         </div>
     </div>
+    <!-- Card 3: คำแนะนำในการใช้ Headings -->
+    <div class="card">
+        <div class="card-header">
+        </div>
+        <div class="tip-box">
+            <p><b>คำแนะนำ</b>: ใช้เพียงหนึ่ง &lt;h1&gt; ต่อหน้า – เพื่อแสดงถึงหัวข้อหลักหรือหัวเรื่อง</p>
+            <p><strong>หมายเหตุ</strong>: ใช้หัวข้อ HTML สำหรับหัวข้อเท่านั้น ห้ามใช้หัวข้อเพื่อทำให้ข้อความ ตัวใหญ่หรือตัวหนา</p>
+        </div>
+    </div>
+
+
     <a href="index.html"><p style="text-align: right;">Back to Home</p></a>
     
 </body>
