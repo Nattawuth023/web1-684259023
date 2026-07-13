@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+header,footer,
+.hero,
+.card,
+.tip-box {
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #e00000;
+    background-color: #fff;
+}
+
+header {
+            padding: 20px;
+            color: #fff;
+            background: linear-gradient(to right, #70f356, #f3f356);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand-icon {
+            font-size: 50px;
+        }
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+
+    background-color: #ffdede;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    background-color: #f0e057;
+}
