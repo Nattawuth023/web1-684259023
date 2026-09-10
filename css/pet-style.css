@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* font-size: 16px; */
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.6;
+    color: var(--text-color );
+
+    background:linear-gradient(#e0e0e0 0%,#c5f8c8 50%,#89fa92 100%) ;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+:root{
+    /* สีหลักของเว็ป */
+    --primary-color:green;
+    --primary-dark-color:black;
+
+    /* สีข้อความ */
+    --text-color : black;
+    --mutad-text-color:black;
+    --nav-text-color:black;
+    --ligh-text-color:rgb(253, 252, 252);
+
+    /* สีพื้น */
+    --btn-bg-color:aquamarine;
+    --footer-bg-color:black;
+
+    /* สีเงา */
+    --herder-shadow:0 4px 8px rgb(239, 240, 239);
+    --card-shadow:0 3px 10px black;
+
+    /* สีขอบ */
+    --bordor-color:black;
+
+
+}
+
+/* =================
+        Herder
+==================== */
+
+.header{
+    box-shadow: var(--herder-shadow);
+
+    position: sticky;
+    top:0;
+    z-index: 10;
+
+    background-color: rgba(250, 235, 215, 0.356);
+    backdrop-filter: blur(10px);
+
+}
+
+.header-content{
+    text-align: center;
+    padding-block: 1.5rem;
+    
+}
+
+.header-title{
+    color: var(--primary-color);
+}
+
+.header-subtitle{
+}
+
+/* =================
+        nav
+==================== */
+nav {
+    padding-block: 2rem ;
+    text-align: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--nav-text-color);
+
+    padding: 0.65rem 1.2rem;
+    box-shadow: var(--card-shadow);
+    border-radius: 999px;
+
+    margin: 0.5rem;
+
+    transition: transform 0.5s;
+    display:inline-block;
+}
+
+nav a:hover{
+    transform: translateY(-10px);
+}
+
+nav a.active{
+    background-color: var(--btn-bg-color);
+    color: var(--ligh-text-color);
+}
+
+
+/* =================
+        main
+==================== */
+
+.page-title{
+    text-align: center;
+    margin: bottom 12px;;
+}
+
+.pet-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 1.5rem;
+}
+
+.pet-card{
+    border: var(--bordor-color);
+    box-shadow: var(--card-shadow);
+    border-radius: 0.75rem;
+
+    overflow: hidden;
+    transition: 0.3s,box-shadow;
+}
+
+.pet-card:hover{
+    transform:translateY(-10px);
+    box-shadow: var(--card-shadow);
+}
+
+.pet-card img{
+    height: 16.25rem;
+    width: 100%;
+
+    object-fit: cover;
+    
+}
+
+.pet-content{
+    padding: 1.25rem;
+}
+.pet-content h2{
+    padding: 1.25rem;
+}
+.breed{
+    color: rgb(10, 106, 136);
+}
+
+/* =================
+        footer
+==================== */
+
+.footer{
+    background-color:var(--footer-bg-color);
+    color: var(--ligh-text-color);
+
+    text-align: center;
+    padding: block 2rem; ;
+}
