@@ -6,164 +6,288 @@
 
 html {
     scroll-behavior: smooth;
-    /* font-size: 16px; */
 }
 
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Prompt', 'Kanit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: var(--text-color );
-
-    background:linear-gradient(#e0e0e0 0%,#c5f8c8 50%,#89fa92 100%) ;
+    color: var(--text-color);
+    /* ปรับ Background ให้เป็นโทนพาสเทลอ่อนๆ สบายตา */
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    min-height: 100vh;
 }
 
 .container {
-    max-width: 1320px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem 3rem 1rem;
 }
 
-:root{
-    /* สีหลักของเว็ป */
-    --primary-color:green;
-    --primary-dark-color:black;
+:root {
+    /* สีหลักของเว็บไซต์  */
+    --primary-color: #2e7d32;
+    --primary-dark-color: #1b5e20;
 
     /* สีข้อความ */
-    --text-color : black;
-    --mutad-text-color:black;
-    --nav-text-color:black;
-    --ligh-text-color:rgb(253, 252, 252);
+    --text-color: #2d3748;
+    --muted-text-color: #718096;
+    --nav-text-color: #4a5568;
+    --light-text-color: #ffffff;
 
-    /* สีพื้น */
-    --btn-bg-color:aquamarine;
-    --footer-bg-color:black;
+    /* สีองค์ประกอบ */
+    --btn-bg-color: #43a047;
+    --btn-hover-bg: #2e7d32;
+    --card-bg: #ffffff;
+    --footer-bg-color: #1a202c;
 
-    /* สีเงา */
-    --herder-shadow:0 4px 8px rgb(239, 240, 239);
-    --card-shadow:0 3px 10px black;
+    /* เงา  */
+    --header-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    --hover-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
 
-    /* สีขอบ */
-    --bordor-color:black;
-
-
+    /* ขอบ */
+    --border-color: #edf2f7;
 }
 
 /* =================
-        Herder
+        Header
 ==================== */
 
-.header{
-    box-shadow: var(--herder-shadow);
-
+.header {
+    box-shadow: var(--header-shadow);
     position: sticky;
-    top:0;
+    top: 0;
     z-index: 10;
-
-    background-color: rgba(250, 235, 215, 0.356);
-    backdrop-filter: blur(10px);
-
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
 }
 
-.header-content{
+.header-content {
     text-align: center;
-    padding-block: 1.5rem;
-    
+    padding-block: 1.25rem;
 }
 
-.header-title{
+.header-title {
     color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
-.header-subtitle{
+.header-subtitle {
+    color: var(--muted-text-color);
+    font-size: 0.95rem;
+    margin-top: 0.25rem;
 }
 
 /* =================
-        nav
+        Nav
 ==================== */
+
 nav {
-    padding-block: 2rem ;
+    padding-block: 1.5rem;
     text-align: center;
 }
 
-nav a{
+nav a {
     text-decoration: none;
     color: var(--nav-text-color);
-
-    padding: 0.65rem 1.2rem;
-    box-shadow: var(--card-shadow);
+    background-color: var(--card-bg);
+    padding: 0.6rem 1.25rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+    border: 1px solid var(--border-color);
     border-radius: 999px;
-
-    margin: 0.5rem;
-
-    transition: transform 0.5s;
-    display:inline-block;
+    margin: 0.3rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
 }
 
-nav a:hover{
-    transform: translateY(-10px);
+nav a:hover {
+    transform: translateY(-3px);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.15);
 }
 
-nav a.active{
+nav a.active {
     background-color: var(--btn-bg-color);
-    color: var(--ligh-text-color);
+    color: var(--light-text-color);
+    border-color: var(--btn-bg-color);
+    box-shadow: 0 4px 12px rgba(67, 160, 71, 0.3);
 }
-
 
 /* =================
-        main
+        Main
 ==================== */
 
-.page-title{
+.page-title {
     text-align: center;
-    margin: bottom 12px;;
+    margin-bottom: 2rem;
+    font-size: 1.75rem;
+    color: var(--text-color);
 }
 
-.pet-grid{
+.pet-grid {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+    margin-bottom: 3rem;
 }
 
-.pet-card{
-    border: var(--bordor-color);
+.pet-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
     box-shadow: var(--card-shadow);
-    border-radius: 0.75rem;
-
+    border-radius: 1rem;
     overflow: hidden;
-    transition: 0.3s,box-shadow;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
-.pet-card:hover{
-    transform:translateY(-10px);
-    box-shadow: var(--card-shadow);
+.pet-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--hover-shadow);
 }
 
-.pet-card img{
-    height: 16.25rem;
+.pet-card img {
+    height: 14rem;
     width: 100%;
-
     object-fit: cover;
-    
 }
 
-.pet-content{
+.pet-content {
     padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
-.pet-content h2{
-    padding: 1.25rem;
+
+.pet-content h2 {
+    font-size: 1.25rem;
+    color: var(--text-color);
+    margin-bottom: 0.2rem;
 }
-.breed{
-    color: rgb(10, 106, 136);
+
+.breed {
+    color: #0284c7;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pet-content p {
+    color: var(--muted-text-color);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.pet-content a {
+    margin-top: auto;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: color 0.2s;
+}
+
+.pet-content a:hover {
+    color: var(--primary-dark-color);
+    text-decoration: underline;
 }
 
 /* =================
-        footer
+   ส่วนคำแนะนำ (Info Section)
 ==================== */
 
-.footer{
-    background-color:var(--footer-bg-color);
-    color: var(--ligh-text-color);
+.into-section {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 1.25rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-color);
+}
 
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
     text-align: center;
-    padding: block 2rem; ;
+    color: var(--text-color);
+}
+
+.into-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+}
+
+.into-card {
+    padding: 1.25rem;
+    border-radius: 0.85rem;
+    border: 1px solid transparent;
+    transition: transform 0.2s ease;
+}
+
+.into-card:hover {
+    transform: translateY(-3px);
+}
+
+.into-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 0.5rem;
+}
+
+.into-card p {
+    font-size: 0.875rem;
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+/* โทนสีการ์ดคำแนะนำให้เข้ากัน */
+.info-blue {
+    background-color: #f0f7ff;
+    border-color: #e0f2fe;
+}
+
+.info-purple {
+    background-color: #fbf5ff;
+    border-color: #f3e8ff;
+}
+
+.info-green {
+    background-color: #f0fdf4;
+    border-color: #dcfce7;
+}
+
+.info-orange {
+    background-color: #fff7ed;
+    border-color: #ffedd5;
+}
+
+/* =================
+        Footer
+==================== */
+
+footer {
+    background-color: var(--footer-bg-color);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
 }
