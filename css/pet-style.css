@@ -209,9 +209,6 @@ nav a.active {
     text-decoration: underline;
 }
 
-/* =================
-   ส่วนคำแนะนำ (Info Section)
-==================== */
 
 .into-section {
     background-color: var(--card-bg);
@@ -259,7 +256,6 @@ nav a.active {
     line-height: 1.6;
 }
 
-/* โทนสีการ์ดคำแนะนำให้เข้ากัน */
 .info-blue {
     background-color: #f0f7ff;
     border-color: #e0f2fe;
